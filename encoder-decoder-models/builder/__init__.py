@@ -9,6 +9,7 @@ def get_datasets(
         test_annotations_fp: str,
         use_entities: bool, 
         use_demographics: bool, 
+        use_understandings: bool,
         clean_contractions: bool,
         decoder_name: str,
         sep_token: str,
@@ -23,6 +24,7 @@ def get_datasets(
     print('--- External Knowledge (Feature Extractors) ---')
     print('Adding entity information?', use_entities)
     print('Adding demographic information?', use_demographics)
+    print('Adding understandings information?', use_understandings)
 
     print('--- NLP Cleaning Steps---')
     print('Clean Contractions?', clean_contractions)
@@ -30,6 +32,7 @@ def get_datasets(
     kwargs = {
         "use_entities": use_entities,
         "use_demographics": use_demographics,
+        "use_understandings": use_understandings,
         "clean_contractions": clean_contractions,
         "decoder_name": decoder_name,
         "sep_token": sep_token

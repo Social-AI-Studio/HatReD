@@ -7,8 +7,7 @@ python -u main.py \
     --ENC_MODEL_NAME "t5-large" \
     --DEC_MODEL_NAME "t5-large" \
     --SAVE_FILEPATH "t5-large-$seed-$lr-$warmup" \
-    --USE_ENTITIES \
-    --USE_DEMOGRAPHICS \
+    --USE_UNDERSTANDINGS \
     --CLEAN_CONTRACTIONS \
     --WARM_UP $warmup \
     --EPOCHS 30 \

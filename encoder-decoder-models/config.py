@@ -28,6 +28,7 @@ def parse_opt(phase):
 
     parser.add_argument('--USE_ENTITIES', action="store_true")
     parser.add_argument('--USE_DEMOGRAPHICS', action="store_true")
+    parser.add_argument('--USE_UNDERSTANDINGS', action="store_true")
     parser.add_argument('--USE_CAPTIONS', action="store_true")
     parser.add_argument('--USE_TITLE', action="store_true")
     parser.add_argument('--USE_SNIPPET', action="store_true")

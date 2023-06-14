@@ -122,6 +122,7 @@ if __name__=='__main__':
         opt.TEST_ANNOTATIONS,
         opt.USE_ENTITIES,
         opt.USE_DEMOGRAPHICS,
+        opt.USE_UNDERSTANDINGS,
         opt.CLEAN_CONTRACTIONS,
         opt.DEC_MODEL_NAME,
         sep_token,

@@ -15,12 +15,13 @@ class MemeFeatureDataset(MemeDataset):
                  features_dir: str,
                  use_entities: bool, 
                  use_demographics: bool,
+                 use_understandings: bool,
                  clean_contractions: bool,
                  decoder_name: str,
                  sep_token: str):
         
         super().__init__(
-            annotations_fp, use_entities, use_demographics,
+            annotations_fp, use_entities, use_demographics, use_understandings,
             clean_contractions, sep_token
         )
 

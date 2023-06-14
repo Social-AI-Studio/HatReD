@@ -54,7 +54,6 @@ class VisionLanguageEncoderDecoderTrainer(BaseTrainer):
                 progressbar.set_postfix(step=total_step, lr=current_lr, loss=loss)
 
                 total_loss += loss
-                break
 
             self.logger.write(f"Average Training Loss: {total_loss}")
 
@@ -129,7 +128,6 @@ class VisionLanguageEncoderDecoderTrainer(BaseTrainer):
                 [x.replace('<|endoftext|>', '') for x in lst] 
                 for lst in batch['output_sents']
             ]
-            break
         
         # compute metric and save model
         results = self.evaluator.compute_metrics(total_candidates, total_references)
@@ -207,7 +205,6 @@ class VisionLanguageEncoderDecoderTrainer(BaseTrainer):
                 [x.replace('<|endoftext|>', '') for x in lst] 
                 for lst in batch['output_sents']
             ]
-            break
         
         results = self.evaluator.compute_metrics(total_candidates, total_references)
         results['candidates'] = total_candidates

@@ -10,11 +10,13 @@ class MemeDataset:
                  annotations_fp: str,
                  use_entities: bool, 
                  use_demographics: bool, 
+                 use_understandings: bool,
                  clean_contractions: bool,
                  sep_token: str):
 
         self.use_entities = use_entities
         self.use_demographics = use_demographics
+        self.use_understandings = use_understandings
 
         self.clean_contractions = clean_contractions
         self.sep_token = sep_token
@@ -38,7 +40,8 @@ class MemeDataset:
         ) -> str:
         for condition, column in (
             (self.use_entities, 'entity'),
-            (self.use_demographics, 'race')
+            (self.use_demographics, 'race'),
+            (self.use_understandings, 'understandings'),
         ):
             if condition:
                 input_sent += f" {self.sep_token} {data[column].strip()}"
