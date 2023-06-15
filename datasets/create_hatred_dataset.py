@@ -26,22 +26,32 @@ def main(github_dir):
     train_annotations_fp = os.path.join(github_dir, "data", "annotations", "train.json")
     test_annotations_fp = os.path.join(github_dir, "data", "annotations", "dev_seen.json")
 
+    print("Constructing HatReD's train dataset...")
     train_df = construct_dataset(
         train_annotations_fp,
         "fhm/annotations/fhm_train_reasonings.jsonl",
         "fhm/auxiliary/fhm_train_race.jsonl",
         "fhm/auxiliary/fhm_train_entity.jsonl"
     )
+    print(f"HatReD's train dataset size: {len(train_df)}")
 
+    print("Constructing HatReD's test dataset...")
     test_df = construct_dataset(
         test_annotations_fp,
         "fhm/annotations/fhm_test_reasonings.jsonl",
         "fhm/auxiliary/fhm_test_race.jsonl",
         "fhm/auxiliary/fhm_test_entity.jsonl"
     )
+    print(f"HatReD's test dataset size: {len(train_df)}")
 
-    train_df.to_json("fhm/annotations/fhm_train.jsonl", orient="records", lines=True)
-    test_df.to_json("fhm/annotations/fhm_test.jsonl", orient="records", lines=True)
+    train_fp = "fhm/annotations/fhm_train.jsonl"
+    test_fp = "fhm/annotations/fhm_test.jsonl"
+    train_df.to_json(train_fp, orient="records", lines=True)
+    test_df.to_json(test_fp, orient="records", lines=True)
+
+    print("Location of the constructed files")
+    print(f"HatReD's train dataset: {train_fp}")
+    print(f"HatReD's test dataset: {test_fp}")
 
 
 if __name__ == "__main__":
