@@ -19,17 +19,17 @@ Due to the dataset licencing agreement, we are unable to provide direct download
 ## Step 4. Image Captioning (Provided)
 In order to engage with text-based multimodal models, we employed an image captioning technique to derive the textual representation that portrays the image. To accomplish this objective, we utilized the [ClipCap](https://github.com/rmokady/CLIP_prefix_caption) model for the extraction of image captions.
 
-The extracted image captions can be found in the following directory: `fhm/captions`
+The extracted image captions can be found in the following directory: `hatred/captions`
 
 ## Step 5. Extracting Web Entities and Demographic Information (Provided)
 To enhance the visual attributes available for text-based multimodal models, we employed the FairFace classifier and Google Web Vision APIs, specifically the Web Detect API, for the purpose of race and entity extraction, respectively.
 
-The extracted image captions can be found in the following directory: `fhm/auxiliary`
+The extracted image captions can be found in the following directory: `hatred/auxiliary`
 
 ## Step 6. Extracting Visual Embeddings (Provided)
 As VisualBERT and VL-T5 uses pre-extracted visual embeddings for training of their models, we have uploaded the extracted visual embeddings used for these models
 
-The extracted visual embeddings can be found [here](). Note that the visual embeddings should be placed under `fhm/features/clean` folder. 
+The extracted visual embeddings can be found [here](https://sutdapac-my.sharepoint.com/:u:/g/personal/mingshan_hee_mymail_sutd_edu_sg/EVxt-arUfYRJiGqDn5iq6DMBYLolU7MBsLx3r2YKzht2mw?e=aiE5SY). Note that the visual embeddings should be placed under `hatred/features/clean` folder. 
 
 ## Step 7. Constructing the HatReD's train and test set
 To construct the train and test dataset for HatReD using the downloaded Hateful Memes Finegrained annotations, you can execute the following command.
