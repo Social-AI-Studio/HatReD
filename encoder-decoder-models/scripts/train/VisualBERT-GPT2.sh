@@ -14,9 +14,9 @@ python -u main.py \
     --EPOCHS 30 \
     --BATCH_SIZE 16 \
     --GRADIENT_ACCUMULATION_STEPS 2 \
-    --TRAIN_ANNOTATIONS "../datasets/annotations/fhm_train.jsonl" \
-    --TEST_ANNOTATIONS "../datasets/annotations/fhm_test.jsonl" \
-    --FEATURES_FILEPATH "../datasets/features/clean/" \
+    --TRAIN_ANNOTATIONS "../datasets/hatred/annotations/fhm_train.jsonl" \
+    --TEST_ANNOTATIONS "../datasets/hatred/annotations/fhm_test.jsonl" \
+    --FEATURES_FILEPATH "../datasets/hatred/features/clean/" \
     --TARGET_MODE 'random' \
     --LR_RATE $lr \
     --CUDA_DEVICE cuda:0 \

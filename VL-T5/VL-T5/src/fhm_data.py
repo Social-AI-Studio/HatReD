@@ -27,7 +27,7 @@ from tokenization import VLT5TokenizerFast
 
 import contractions
 
-dataset_dir = "../../datasets/"
+dataset_dir = "../../datasets/hatred/"
 features_fp = os.path.join(dataset_dir, "features/clean/{img_id}.npy")
 features_info_fp = os.path.join(dataset_dir, "features/clean/{img_id}_info.npy")
 annotations_fp = os.path.join(dataset_dir, "annotations/fhm_{split}.jsonl")

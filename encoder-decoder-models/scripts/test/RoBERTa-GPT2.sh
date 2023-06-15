@@ -16,8 +16,8 @@ python -u main.py \
     --CLEAN_CONTRACTIONS \
     --WARM_UP $warmup \
     --LR_RATE $lr \
-    --TRAIN_ANNOTATIONS "../datasets/annotations/fhm_train.jsonl" \
-    --TEST_ANNOTATIONS "../datasets/annotations/fhm_test.jsonl" \
-    --CAPTIONS_FILEPATH "../datasets/captions/fhm_clean_captions.pkl" \
+    --TRAIN_ANNOTATIONS "../datasets/hatred/annotations/fhm_train.jsonl" \
+    --TEST_ANNOTATIONS "../datasets/hatred/annotations/fhm_test.jsonl" \
+    --CAPTIONS_FILEPATH "../datasets/hatred/captions/fhm_clean_captions.pkl" \
     --TARGET_MODE 'random' \
     --CUDA_DEVICE cuda:0
