@@ -30,7 +30,7 @@ import contractions
 dataset_dir = "../../datasets/"
 features_fp = os.path.join(dataset_dir, "features/clean/{img_id}.npy")
 features_info_fp = os.path.join(dataset_dir, "features/clean/{img_id}_info.npy")
-annotations_fp = os.path.join(dataset_dir, "annotations/fhm_{split}_reasonings.jsonl")
+annotations_fp = os.path.join(dataset_dir, "annotations/fhm_{split}.jsonl")
 
 class FHMFineTuneDataset(Dataset):
     def __init__(self, split='train', rank=-1, topk=-1, verbose=True, args=None):

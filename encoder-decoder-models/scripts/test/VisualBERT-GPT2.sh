@@ -16,8 +16,8 @@ python -u main.py \
     --CLEAN_CONTRACTIONS \
     --WARM_UP $warmup \
     --LR_RATE $lr \
-    --TRAIN_ANNOTATIONS "../datasets/annotations/fhm_train_reasonings.jsonl" \
-    --TEST_ANNOTATIONS "../datasets/annotations/fhm_test_reasonings.jsonl" \
+    --TRAIN_ANNOTATIONS "../datasets/annotations/fhm_train.jsonl" \
+    --TEST_ANNOTATIONS "../datasets/annotations/fhm_test.jsonl" \
     --FEATURES_FILEPATH "../datasets/features/clean/" \
     --TARGET_MODE 'random' \
     --CUDA_DEVICE cuda:0 
