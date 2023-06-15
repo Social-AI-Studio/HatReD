@@ -34,6 +34,7 @@ def main(github_dir):
         "fhm/auxiliary/fhm_train_entity.jsonl"
     )
     print(f"HatReD's train dataset size: {len(train_df)}")
+    print()
 
     print("Constructing HatReD's test dataset...")
     test_df = construct_dataset(
@@ -42,7 +43,8 @@ def main(github_dir):
         "fhm/auxiliary/fhm_test_race.jsonl",
         "fhm/auxiliary/fhm_test_entity.jsonl"
     )
-    print(f"HatReD's test dataset size: {len(train_df)}")
+    print(f"HatReD's test dataset size: {len(test_df)}")
+    print()
 
     train_fp = "fhm/annotations/fhm_train.jsonl"
     test_fp = "fhm/annotations/fhm_test.jsonl"
