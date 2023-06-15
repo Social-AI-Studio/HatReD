@@ -4,3 +4,5 @@ torchvision
 torchaudio
 contractions
 evaluate
+bert_score
+rouge_score
